@@ -14,7 +14,7 @@ specifiers:
   prettier: 2.7.1
   react: 18.2.0
   react-dom: 18.2.0
-  react-router-dom: 6.3.0
+  react-router-dom: 6.30.6
   tailwindcss: 3.1.7
   typescript: 4.7.4
   valtio: 1.6.3
@@ -23,7 +23,7 @@ specifiers:
 dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  react-router-dom: 6.3.0_biqbaboplfbrettd7655fr4n2y
+  react-router-dom: 6.30.6_biqbaboplfbrettd7655fr4n2y
   valtio: 1.6.3_react@18.2.0+vite@3.0.4
 
 devDependencies:
@@ -38,7 +38,7 @@ devDependencies:
   eslint-plugin-react: 7.30.1_eslint@8.21.0
   postcss: 8.4.14
   prettier: 2.7.1
-  tailwindcss: 3.1.7
+  tailwindcss: 3.1.7_postcss@8.4.14
   typescript: 4.7.4
   vite: 3.0.4
 
@@ -275,13 +275,6 @@ packages:
       '@babel/types': 7.18.10
     dev: true
 
-  /@babel/runtime/7.17.9:
-    resolution: {integrity: sha512-lSiBBvodq29uShpWGNbgFdKYNiFDo5/HIYsaCEY9ff4sb10x9jizo2+pRrSyF4jKZCXqgzuqBOQKbUm90gQwJg==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      regenerator-runtime: 0.13.9
-    dev: false
-
   /@babel/template/7.18.10:
     resolution: {integrity: sha512-TI+rCtooWHr3QJ27kJxfjutghu44DLnasDMwpDqCXVTal9RLp3RSYNh4NdBrRP2cQAoG9A8juOQl6P6oZG4JxA==}
     engines: {node: '>=6.9.0'}
@@ -420,6 +413,11 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
     dev: true
+
+  /@remix-run/router/1.23.4:
+    resolution: {integrity: sha512-q7j5geK7xs3UJSdm9/iytUNclBnLmYx1EnSeCFXHPeutdqgIMeFeHtUZgS3EhlKxdBEAu8OwtJCwmLrEzpSs7Q==}
+    engines: {node: '>=14.0.0'}
+    dev: false
 
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
@@ -1530,12 +1528,6 @@ packages:
     dependencies:
       function-bind: 1.1.1
 
-  /history/5.3.0:
-    resolution: {integrity: sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==}
-    dependencies:
-      '@babel/runtime': 7.17.9
-    dev: false
-
   /ignore/5.2.0:
     resolution: {integrity: sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==}
     engines: {node: '>= 4'}
@@ -2074,24 +2066,26 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /react-router-dom/6.3.0_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-uaJj7LKytRxZNQV8+RbzJWnJ8K2nPsOOEuX7aQstlMZKQT0164C+X2w6bnkqU3sjtLvpd5ojrezAyfZ1+0sStw==}
+  /react-router-dom/6.30.6_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-0RHKZz7wwffvkU+2MFVT2NnjK44ssLEV+m0CAJaS2Ksmorrwj7WxH00jO0SOCW26/tINUnJHToXblDs33I38YQ==}
+    engines: {node: '>=14.0.0'}
     peerDependencies:
       react: '>=16.8'
       react-dom: '>=16.8'
     dependencies:
-      history: 5.3.0
+      '@remix-run/router': 1.23.4
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      react-router: 6.3.0_react@18.2.0
+      react-router: 6.30.6_react@18.2.0
     dev: false
 
-  /react-router/6.3.0_react@18.2.0:
-    resolution: {integrity: sha512-7Wh1DzVQ+tlFjkeo+ujvjSqSJmkt1+8JO+T5xklPlgrh70y7ogx75ODRW0ThWhY7S+6yEDks8TYrtQe/aoboBQ==}
+  /react-router/6.30.6_react@18.2.0:
+    resolution: {integrity: sha512-5HfK7k5im7LTOB0EqCQmfvy4C13G92Ssj1VTmouTK3AJvyjKTnFuCV0vcMAD/JS+JC4DvDIBRrlAeJIFjh5VWg==}
+    engines: {node: '>=14.0.0'}
     peerDependencies:
       react: '>=16.8'
     dependencies:
-      history: 5.3.0
+      '@remix-run/router': 1.23.4
       react: 18.2.0
     dev: false
 
@@ -2114,10 +2108,6 @@ packages:
     dependencies:
       picomatch: 2.3.1
     dev: true
-
-  /regenerator-runtime/0.13.9:
-    resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==}
-    dev: false
 
   /regexp.prototype.flags/1.4.3:
     resolution: {integrity: sha512-fjggEOO3slI6Wvgjwflkc4NFRCTZAu5CnNfBd5qOMYhWdn67nJBBu34/TkD++eeFmd8C9r9jfXJ27+nSiRkSUA==}
@@ -2293,10 +2283,12 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  /tailwindcss/3.1.7:
+  /tailwindcss/3.1.7_postcss@8.4.14:
     resolution: {integrity: sha512-r7mgumZ3k0InfVPpGWcX8X/Ut4xBfv+1O/+C73ar/m01LxGVzWvPxF/w6xIUPEztrCoz7axfx0SMdh8FH8ZvRQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
+    peerDependencies:
+      postcss: ^8.0.9
     dependencies:
       arg: 5.0.2
       chokidar: 3.5.3
